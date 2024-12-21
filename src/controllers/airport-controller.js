@@ -10,7 +10,6 @@ async function createAirport(req, res) {
       address: req.body.address,
       cityId: req.body.cityId,
     });
-    console.log(response);
     SuccessResponse.data = response;
     return res.status(StatusCodes.CREATED).json(SuccessResponse);
   } catch (error) {
