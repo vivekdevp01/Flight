@@ -68,13 +68,13 @@ async function getAllFlights(query) {
     const sortFilters = params.map((param) => param.split("_"));
     sortFilter = sortFilters;
   }
-  console.log(customFilter, sortFilter);
+  // console.log(customFilter, sortFilter);
   try {
     const response = await flightRepository.getAllFlights(
       customFilter,
       sortFilter
     );
-    console.log(response);
+    // console.log(response);
     return response;
   } catch (error) {
     throw new AppError(

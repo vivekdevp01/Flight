@@ -11,12 +11,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.belongsTo(models.Airplane, {
         foreignKey: "airplaneId",
+        as: "airplane_details",
       });
       this.belongsTo(models.Airport, {
         foreignKey: "arrivalAirportId",
+        as: "arrival_airport_details",
       });
       this.belongsTo(models.Airport, {
         foreignKey: "departureAirportId",
+        as: "departure_airport_details",
       });
     }
   }
