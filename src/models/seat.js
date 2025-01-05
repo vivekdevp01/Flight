@@ -23,9 +23,9 @@ module.exports = (sequelize, DataTypes) => {
       airplaneId: { type: DataTypes.INTEGER, allowNull: false },
       type: {
         type: DataTypes.ENUM,
-        allowNull: false,
         values: [ECONOMY, PREMIUM_ECONOMY, BUSINESS, FIRST_CLASS],
         defaultValue: ECONOMY,
+        allowNull: false,
       },
     },
     {
